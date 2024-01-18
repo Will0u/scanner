@@ -27,7 +27,7 @@ function success(reference) {
     document.getElementById('count').textContent=`Compté : ${localStorage.getItem(reference)}`;
     document.getElementById('link').src = `https://media.e.leclerc/${reference}_1`;
     document.getElementById('error').textContent=``;
-    restart();
+    scanner.render(success, error);
 }
 
 function error() {
