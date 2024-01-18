@@ -41,6 +41,9 @@ function restart() {
 
 document.querySelector('#add').addEventListener('click' , add);
 document.querySelector('#minus').addEventListener('click' , minus);
+document.querySelector('#scanBtn').addEventListener('click' , () => {
+    scanner.render(success,error);
+});
 
 function add() {
     let reference = document.getElementById('btnSection').getAttribute('reference');
