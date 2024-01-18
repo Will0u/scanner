@@ -5,7 +5,12 @@ const scanner = new Html5QrcodeScanner('scanner' , {
         width: 300,
         height: 300
     },
-    fps: 40
+    fps: 40,
+    videoConstraints: {
+         facingMode: {
+            exact: "environment"
+        }
+    }
 });
 
 scanner.render(success, error);
@@ -27,7 +32,6 @@ function success(reference) {
 
 function error() {
     document.getElementById('error').textContent=`Une erreur est survenue !`;
-    restart();
 }
 
 function restart() {
