@@ -5,7 +5,7 @@ const scanner = new Html5QrcodeScanner('scanner' , {
         width: 300,
         height: 300
     },
-    fps: 40,
+    fps: 60,
     videoConstraints: {
          facingMode: {
             exact: "environment"
@@ -27,7 +27,7 @@ function success(reference) {
     document.getElementById('count').textContent=`Compté : ${localStorage.getItem(reference)}`;
     document.getElementById('link').src = `https://media.e.leclerc/${reference}_1`;
     document.getElementById('error').textContent=``;
-    scanner.render(success, error);
+    restart();
 }
 
 function error() {
