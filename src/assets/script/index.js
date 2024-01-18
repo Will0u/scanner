@@ -5,12 +5,7 @@ const scanner = new Html5QrcodeScanner('scanner' , {
         width: 300,
         height: 300
     },
-    fps: 40,
-    videoConstraints: {
-         facingMode: {
-            exact: "environment"
-        }
-    }
+    fps: 40
 });
 
 scanner.render(success, error);
