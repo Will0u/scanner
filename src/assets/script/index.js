@@ -16,8 +16,12 @@ export const scanner = new Html5QrcodeScanner('scanner' , {
     }
 });
 
+scanner.render(success , error);
+
 document.querySelectorAll('#operatorBtn').forEach(btn => {
     btn.addEventListener('click',operator);
 });
 
-document.querySelector('#scanBtn').addEventListener('click' , scanner.render(success,error));
+document.querySelector('#scanBtn').addEventListener('click' , () => {
+    scanner.render(success , error);
+});
