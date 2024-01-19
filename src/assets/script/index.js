@@ -1,7 +1,7 @@
 import { Html5QrcodeScanner } from "html5-qrcode";
-import { error, success } from "./_scanEvent.js";
-import './_operator.js';
-import { operator } from "./_operator.js";
+import { error, scanBtn, success } from "./_scanEvent.js";
+import { operatorBtn } from "./_operator.js";
+import './../style/scss/main.scss';
 
 export const scanner = new Html5QrcodeScanner('scanner' , {
     qrbox: {
@@ -15,13 +15,16 @@ export const scanner = new Html5QrcodeScanner('scanner' , {
         }
     }
 });
-
 scanner.render(success , error);
 
-document.querySelectorAll('#operatorBtn').forEach(btn => {
-    btn.addEventListener('click',operator);
-});
+operatorBtn();
+scanBtn();
 
-document.querySelector('#scanBtn').addEventListener('click' , () => {
-    scanner.render(success , error);
-});
+const test = new XMLHttpRequest();
+test.open("GET" , "https://www.barcodelookup.com/9782081404328")
+test.onreadystatechange = function() {
+    if (test.readyState === 4) {
+        alert(test.responseText);
+      }
+}
+test.send();
