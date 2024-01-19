@@ -21,6 +21,7 @@ export function success(
         reference,
     ) 
 {
+    restart();
     if (localStorage.getItem(reference) === null) {
         localStorage.setItem(reference,1);
     } else {
@@ -31,8 +32,6 @@ export function success(
     document.querySelector('#result').textContent =`Référence : ${reference}`;
     document.querySelector('#count').textContent =`Compté : ${localStorage.getItem(reference)}`;
     document.querySelector('#error').textContent ='';
-    scanner.clear();
-    scanner.render(success,error);
 }
 
 
