@@ -4,7 +4,7 @@ import { scanner } from "./index.js";
  * error
  * display error msg if scan failed
  */
-export function error(errorHtml) 
+export function error() 
 {
     document.querySelector('#error').textContent = 'Une erreur est survenue !';
 }

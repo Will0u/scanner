@@ -16,7 +16,3 @@ export const scanner = new Html5QrcodeScanner('scanner' , {
 });
 
 scanner.render(success, error);
-
-document.querySelector('#scanner').addEventListener('click' , () => {
-    scanner.render(success,error);
-});
