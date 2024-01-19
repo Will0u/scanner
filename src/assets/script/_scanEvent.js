@@ -31,7 +31,8 @@ export function success(
     document.querySelector('#result').textContent =`Référence : ${reference}`;
     document.querySelector('#count').textContent =`Compté : ${localStorage.getItem(reference)}`;
     document.querySelector('#error').textContent ='';
-    restart();
+    scanner.clear();
+    scanner.render(success,error);
 }
 
 
@@ -41,6 +42,7 @@ export function success(
  * restart scan
  */
 export function restart() {
+    console.log('restart');
     scanner.clear();
     scanner.render(success,error);
 }
