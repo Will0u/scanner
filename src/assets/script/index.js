@@ -19,12 +19,3 @@ scanner.render(success , error);
 
 operatorBtn();
 scanBtn();
-
-const test = new XMLHttpRequest();
-test.open("GET" , "https://www.barcodelookup.com/9782081404328")
-test.onreadystatechange = function() {
-    if (test.readyState === 4) {
-        alert(test.responseText);
-      }
-}
-test.send();
