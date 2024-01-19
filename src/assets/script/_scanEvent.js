@@ -31,8 +31,6 @@ export function success(
     document.querySelector('#result').textContent =`Référence : ${reference}`;
     document.querySelector('#count').textContent =`Compté : ${localStorage.getItem(reference)}`;
     document.querySelector('#error').textContent ='';
-    scanner.clear();
-    restart();
 }
 
 

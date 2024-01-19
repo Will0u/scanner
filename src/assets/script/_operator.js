@@ -1,12 +1,11 @@
 import { getStockFromLocal } from "./_functions";
 
 
-
 /**
  * operator
  * add or remove 1 from reference's stock
  */
-function operator() {
+export function operator() {
     let operatorData = this.getAttribute('operator');
     let reference = document.querySelector('#btnSection').getAttribute('reference');
     let stock = getStockFromLocal(reference);
@@ -17,9 +16,3 @@ function operator() {
     }
     document.querySelector('#count').textContent = `Compté : ${localStorage.getItem(reference)}`;
 }
-
-
-
-document.querySelectorAll('#operatorBtn').forEach(btn => {
-    btn.addEventListener('click',operator);
-});
