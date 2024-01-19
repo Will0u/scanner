@@ -31,7 +31,9 @@ export function success(reference)
     editCountHtml(localStorage.getItem(reference));
     document.querySelector('#error').textContent ='';
     displayImage(reference)
+    console.log(document.querySelector('iframe'));
     scanner.clear();
+    
 }
 
 
@@ -52,5 +54,5 @@ export function scanBtn()
 function displayImage(reference) {
     let refStart = reference.substr(0,5);
     // https://images.barcodelookup.com/81709/817092613-1.jpg
-    document.querySelector('#link').src = `https://images.barcodelookup.com/${refStart}/${reference}-1.jpg`;
+    document.querySelector('#link').src = `https://go-upc.com/search?q=${reference}`;
 }
