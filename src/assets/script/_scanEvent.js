@@ -26,6 +26,9 @@ export function success(reference)
         let stock = parseInt(localStorage.getItem(reference));
         localStorage.setItem(reference, stock+1);
     }
+    document.querySelectorAll('#operatorBtn').forEach(button => {
+        button.disabled = false;
+    });
     document.querySelector('#btnSection').setAttribute('reference' , reference);
     document.querySelector('#result').textContent =`Référence : ${reference}`;
     editCountHtml(localStorage.getItem(reference));
