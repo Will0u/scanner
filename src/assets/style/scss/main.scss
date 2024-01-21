@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import './normalizer';
 
-iframe {
-    width: 100%;
-    height: 600px;
+#frameSection {
     margin-bottom: 5rem;
+    iframe {
+        width: 100%;
+        height: 600px;
+    }
 }
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -63,3 +66,10 @@ section {
     }
 }
 
+#error {
+    background-color: rgba(221, 21, 21, 0.2);
+    padding: .5rem;
+    color: red;
+    border-left: 7px solid red;
+    display: none;
+}

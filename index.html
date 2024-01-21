@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scanner Leclerc</title>
+    <title>Scanner</title>
   </head>
   <body>
     <script type='module' src="./src/assets/script/index.js"></script>
-
-    <h1>Scanner v2.1.1</h1>
-
+    
     <section>
+      <h1>Scanner v2.1.2</h1>
       <div id="scanner"></div>
     </section>
     
-    <section>
+    <section id="frameSection">
+      <p id="error">Une erreur est survenue !</p>
       <p id="result"></p>
       <p id="count"></p>
       <iframe id="link">
@@ -25,10 +25,6 @@
       <button id="operatorBtn" operator="add" disabled>+</button>
       <button id="scanBtn">Scan</button>
       <button id="operatorBtn" operator="minus" disabled>-</button>
-    </section>
-
-    <section>
-        <p id="error"></p>
     </section>
 
   </body>

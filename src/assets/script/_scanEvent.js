@@ -7,7 +7,7 @@ import { scanner } from "./index.js";
  */
 export function error() 
 {
-    document.querySelector('#error').textContent = 'Une erreur est survenue !';
+    document.querySelector('#error').style.display = 'block';
 }
 
 
@@ -32,7 +32,6 @@ export function success(reference)
     document.querySelector('#btnSection').setAttribute('reference' , reference);
     document.querySelector('#result').textContent =`Référence : ${reference}`;
     editCountHtml(localStorage.getItem(reference));
-    document.querySelector('#error').textContent ='';
     displayImage(reference)
     console.log(document.querySelector('iframe'));
     scanner.clear();
