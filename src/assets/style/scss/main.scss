@@ -41,6 +41,7 @@ section {
 }
 
 #btnSection {
+    backdrop-filter: blur(2px);
     width: 100%;
     position: fixed;
     bottom: 0;
