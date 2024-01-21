@@ -5,7 +5,7 @@ import { scanner } from "./index.js";
  * error
  * display error msg if scan failed
  */
-export function error(reference) 
+export function error() 
 {
     document.querySelector('#error').style.display = 'block';
     document.querySelector('iframe').style.display = 'none';
@@ -31,6 +31,8 @@ export function success(reference)
     document.querySelectorAll('#operatorBtn').forEach(button => {
         button.disabled = false;
     });
+
+    document.querySelector('#error').style.display = 'none';
 
     document.querySelector('iframe').style.display = 'block';
     document.querySelector('.intelContainer').style.display = 'block';
