@@ -1,11 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import './normalizer';
 
+h1 {
+    padding: .5rem;
+    border-radius: 4px;
+}
+
+iframe, .intelContainer, h1, #scanner {
+    -webkit-box-shadow: 0px 0px 7px 1px lighten(#000000 , 80%); 
+    box-shadow: 0px 0px 7px 1px lighten(#000000 , 80%);
+}
+
 #frameSection {
     margin-bottom: 5rem;
     iframe {
         width: 100%;
         height: 600px;
+        border: none;
+    }
+    .intelContainer {
+        margin-top: .5rem;
+        padding: .5rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+    }
+
+    iframe, .intelContainer {
+        display: none;
     }
 }
 

@@ -5,9 +5,11 @@ import { scanner } from "./index.js";
  * error
  * display error msg if scan failed
  */
-export function error() 
+export function error(reference) 
 {
     document.querySelector('#error').style.display = 'block';
+    document.querySelector('iframe').style.display = 'none';
+    document.querySelector('.intelContainer').style.display = 'none';
 }
 
 
@@ -29,13 +31,15 @@ export function success(reference)
     document.querySelectorAll('#operatorBtn').forEach(button => {
         button.disabled = false;
     });
+
+    document.querySelector('iframe').style.display = 'block';
+    document.querySelector('.intelContainer').style.display = 'block';
+
     document.querySelector('#btnSection').setAttribute('reference' , reference);
     document.querySelector('#result').textContent =`Référence : ${reference}`;
     editCountHtml(localStorage.getItem(reference));
     displayImage(reference)
-    console.log(document.querySelector('iframe'));
     scanner.clear();
-    
 }
 
 
