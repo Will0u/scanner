@@ -58,9 +58,12 @@ export function scanBtn()
 }
 
 
-
-function displayImage(reference) {
-    let refStart = reference.substr(0,5);
-    // https://images.barcodelookup.com/81709/817092613-1.jpg
+/**
+ * 
+ * @param {*} reference 
+ * displayImg in link DOM
+ */
+function displayImage(reference) 
+{
     document.querySelector('#link').src = `https://go-upc.com/search?q=${reference}`;
 }
